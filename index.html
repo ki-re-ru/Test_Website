@@ -35,11 +35,30 @@
   <button class="nothing button" type="button">Do nothing</button>
   <br>
   <a href="page1.html">
-    <button class="hyperlink button" type="button">
+    <button class="P1button" type="button">
       Go to page 1
     </button>
   </a>
   <br>
+  <button id="togglePage2Button" onclick="toggleP2Button()">Activate P2 Button</button>
+  <p id="P2buttonState">Is Page 2 Button active: <span id="P2activeValue">false</span></p>
+  <br>
+  <a href="page2.html">
+    <button id="P2Button" disabled>
+      Go to Page 2
+    </button>
+  </a>
+  <br>
+  <script>
+    let P2activeValue = false;
+    function toggleP2Button() {
+      P2activeValue = !P2activeValue;
+      document.getElementById("P2activeValue").innerText = P2activeValue.toString();
+      const P2Button = document.getElementById("P2Button");
+      P2Button.disabled = !P2Button.disabled;
+    }
+  </script>
+
 </section>
 
 
