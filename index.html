@@ -18,44 +18,39 @@
 <main>
 <article aria-labelledby="artStartPage">
 <header>
-<h1 id="artStartPageHeading">Start Page</h1>
-<h2>AALPY Selenium Test Website</h2>
+<h1 id="artStartPageHeading">Test Website - Start Page</h1>
 </header>
 
 
 <section id="secButtons" aria-labelledby="secButtonsHeading">
-<h2 id="secButtonsHeading">1 Buttons</h2>
+<h2 id="secButtonsHeading">Buttons</h2>
 
-  <a href="https://example.com/">
-    <button class="hyperlink button" type="button">
-      Go to example website
-    </button>
-  </a>
-  <br>
   <button class="nothing button" type="button">Do nothing</button>
   <br>
-  <a>
-  <button class="nothing button" type="button">Do nothing inside anchor</button>
+  <a href="https://example.com/">
+    <button class="hyperlink button" type="button">
+      Button inside Hyperlink - hrefEx
+    </button>
   </a>
   <br>
   <button class="hyperlink button" type="button">
     <a href="https://example.com/">
-      Hyperlink inside button
+      Hyperlink inside Button - hrefEx
     </a>
   </button>
   <br>
   <a href="page1.html">
     <button class="P1button" type="button">
-      Go to page 1
+      Button inside Hyperlink - hrefP1
     </button>
   </a>
   <br>
+  <button id="togglePage2Button" onclick="toggleP2Button()">Toggle P2 Button - onclickScript</button>
   <br>
-  <button id="togglePage2Button" onclick="toggleP2Button()">Toggle P2 Button</button>
   <p id="P2buttonState">Is Page 2 Button active: <span id="P2activeValue">false</span></p>
   <a href="page2.html">
     <button id="P2Button" disabled>
-      Go to page 2
+      Button inside Hyperlink - hrefP2
     </button>
   </a>
   <script>
@@ -68,10 +63,9 @@
     }
   </script>
   <br>
-  <br>
   <a href="page3.html">
     <button class="hyperlink button" type="button">
-      Go to page 3
+      Button inside Hyperlink - hrefP3
     </button>
   </a>
 </section>
@@ -81,7 +75,7 @@
 <h2 id="secHyperlinksHeading">2 Hyperlinks</h2>
 
   <a href="https://example.com/">
-    https://example.com/
+    https://example.com/ - hrefEx
   </a>
 
 </section>
