@@ -40,5 +40,19 @@
             alt="map and areas example image" />
 </a>
 
+<button onclick="toggleDropdown()">Dropdown</button>
+<ul id="dropdownMenu" class="dropdown-content" hidden>
+    <li><a href="page1.html">Page 1</a></li>
+    <li><a href="page2.html">Page 2</a></li>
+    <li><a href="https://example.com/">Example</a></li>
+</ul>
+
+<script>
+    function toggleDropdown() {
+        let menu = document.getElementById("dropdownMenu");
+        menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+</script>
+
 </body>
 </html>
