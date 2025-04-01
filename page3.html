@@ -13,18 +13,26 @@
     <h1 id="artPage3Heading">Test Website - Page 3</h1>
 </header>
 
-<a href="index.html">
+<a href="index.html" aria-label="Map Hyperlink outside Area - hrefStart"> <!-- can be clicked in the parts of the image that is not an area -->
     <map name="map-example">
         <area
                 shape="circle"
                 coords="75,75,75"
                 href="page1.html"
-                alt="Click to go to page 1" />
+                alt="Click to go to page 1"
+                aria-label="Area Hyperlink - hrefP1"/>
         <area
                 shape="circle"
                 coords="275,75,75"
                 href="page2.html"
-                alt="Click to go to page 2" />
+                alt="Click to go to page 2"
+                aria-label="Area Hyperlink - hrefP2"/>
+        <area
+                shape="circle"
+                coords="275,75,75"
+                href="https://example.com/"
+                alt="Click to go to example"
+                aria-label="Covered Area Hyperlink - hrefEx"/> <!-- same position, size etc as area above  -->
     </map>
     <img
             usemap="#map-example"
