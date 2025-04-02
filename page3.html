@@ -53,6 +53,32 @@
         menu.style.display = (menu.style.display === "block") ? "none" : "block";
     }
 </script>
+<br>
+<label for="button-enabler">Enable Button:</label>
+<select id="button-enabler" name="button-enabler" onchange="checkSelection()">
+    <option value="No">No</option>
+    <option value="Yes">Yes</option>
+</select>
+<a href="https://example.com">
+    <button id="ExampleButton" disabled>ButtonInsideHyperlink-hrefEx</button>
+</a>
+<script>
+    function checkSelection() {
+        let select = document.getElementById("button-enabler");
+        let button = document.getElementById("ExampleButton");
+        if (select.value === "No") {
+            button.disabled = true;
+        } else {
+            button.disabled = false;
+        }
+    }
+</script>
+
+<script>
+    window.onload = function() {
+        document.getElementById("button-enabler").value = "No"; // Set default selection
+    };
+</script>
 
 </body>
 </html>
