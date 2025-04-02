@@ -63,11 +63,30 @@
     }
   </script>
   <br>
+  <br>
+  <button id="togglePage3Button" onclick="toggleP3Button()">ToggleP3Button-onclickScript</button>
+  <br>
+  <p id="P3buttonState">Is left Page 3 Button active: <span id="P3activeValue">false</span></p>
   <a href="page3.html">
+    <button id="P3Button" disabled>
+      ButtonInsideHyperlink-hrefP3
+    </button>
     <button class="hyperlink button" type="button">
       ButtonInsideHyperlink-hrefP3
     </button>
   </a>
+  <script>
+    let P3activeValue = false;
+    function toggleP3Button() {
+      P3activeValue = !P3activeValue;
+      document.getElementById("P3activeValue").innerText = P3activeValue.toString();
+      const P3Button = document.getElementById("P3Button");
+      P3Button.disabled = !P3Button.disabled;
+    }
+  </script>
+
+
+
 </section>
 
 
