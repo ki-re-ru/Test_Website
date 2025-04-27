@@ -1,6 +1,6 @@
 
 /* CSS 3 Standard Style Sheet */
-/* Keith Andrews */ 
+/* based on a style sheet created by Keith Andrews */
 
 
 /* for old browsers which do not support new HTML5 tags */
@@ -291,6 +291,15 @@ sub {font-size: 60%}
 
 sup {font-size: 60%}
 
+.square {
+ width: 500px;
+ border: 2px solid black; /* makes the visible square */
+ display: flex;
+ flex-direction: column; /* <<< this makes them stack vertically */
+ gap: 0px;
+ padding: 10px;
+ align-items: center;
+}
 
 table {
   margin: 1em auto 0.5em auto;

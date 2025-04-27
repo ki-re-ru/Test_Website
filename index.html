@@ -25,77 +25,131 @@
 <section id="secButtons" aria-labelledby="secButtonsHeading">
 <h2 id="secButtonsHeading">Buttons</h2>
 
-  <button class="nothing button" type="button">Do nothing</button>
-  <br>
-  <a href="https://example.com/">
-    <button class="hyperlink button" type="button">
-      ButtonInsideHyperlink-hrefEx
-    </button>
-  </a>
-  <br>
-  <button class="hyperlink button" type="button">
-    <a href="https://example.com/">
-      HyperlinkInsideButton-hrefEx
-    </a>
-  </button>
-  <br>
-  <a href="page1.html">
-    <button class="P1button" type="button">
-      ButtonInsideHyperlink-hrefP1
-    </button>
-  </a>
-  <br>
-  <button id="togglePage2Button" onclick="toggleP2Button()">ToggleP2Button-onclickScript</button>
-  <br>
-  <p id="P2buttonState">Is Page 2 Button active: <span id="P2activeValue">false</span></p>
-  <a href="page2.html">
-    <button id="P2Button" disabled>
-      ButtonInsideHyperlink-hrefP2
-    </button>
-  </a>
-  <script>
-    let P2activeValue = false;
-    function toggleP2Button() {
-      P2activeValue = !P2activeValue;
-      document.getElementById("P2activeValue").innerText = P2activeValue.toString();
-      const P2Button = document.getElementById("P2Button");
-      P2Button.disabled = !P2Button.disabled;
-    }
-  </script>
-  <br>
-  <br>
-  <button id="togglePage3Button" onclick="toggleP3Button()">ToggleP3Button-onclickScript</button>
-  <br>
-  <p id="P3buttonState">Is left Page 3 Button active: <span id="P3activeValue">false</span></p>
-  <a href="page3.html">
-    <button id="P3Button" disabled>
-      ButtonInsideHyperlink-hrefP3
-    </button>
-    <button class="hyperlink button" type="button">
-      ButtonInsideHyperlink-hrefP3
-    </button>
-  </a>
-  <script>
-    let P3activeValue = false;
-    function toggleP3Button() {
-      P3activeValue = !P3activeValue;
-      document.getElementById("P3activeValue").innerText = P3activeValue.toString();
-      const P3Button = document.getElementById("P3Button");
-      P3Button.disabled = !P3Button.disabled;
-    }
-  </script>
+  <!--COPY PASTE TEMPLATE
+    <tr>
+      <td>
 
+      </td>
+      <td>
 
+      </td>
+    </tr>
+  -->
 
+  <table>
+    <tr>
+      <td>
+        <button class="nothing button" type="button">Do nothing</button>
+      </td>
+      <td>
+        This button does nothing and has no interactive attributes.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://example.com/">
+          <button class="hyperlink button" type="button">
+            ButtonInsideHyperlink-hrefEx
+          </button>
+        </a>
+      </td>
+      <td>
+        &lt;a href=example&gt;&lt;button&gt;&lt;/button&gt;&lt;/a&gt;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button class="hyperlink button" type="button">
+          <a href="https://example.com/">
+            HyperlinkInsideButton-hrefEx
+          </a>
+        </button>
+      </td>
+      <td>
+        &lt;button&gt;&lt;a href=example&gt;&lt;/a&gt;&lt;/button&gt;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="page1.html">
+          <button class="P1button" type="button">
+            ButtonInsideHyperlink-hrefP1
+          </button>
+        </a>
+      </td>
+      <td>
+        &lt;a href=page1&gt;&lt;button&gt;&lt;/button&gt;&lt;/a&gt;
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button id="togglePage2Button" onclick="toggleP2Button()">ToggleP2Button-onclickScript</button>
+        <p id="P2buttonState">Is Page 2 Button active: <span id="P2activeValue">false</span></p>
+        <a href="page2.html">
+          <button id="P2Button" disabled>
+            ButtonInsideHyperlink-hrefP2
+          </button>
+        </a>
+        <script>
+          let P2activeValue = false;
+          function toggleP2Button() {
+            P2activeValue = !P2activeValue;
+            document.getElementById("P2activeValue").innerText = P2activeValue.toString();
+            const P2Button = document.getElementById("P2Button");
+            P2Button.disabled = !P2Button.disabled;
+          }
+        </script>
+      </td>
+      <td>
+        Clicking the first button enables or disables the second button via a script that is triggered via an onclick attribute.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button id="togglePage3Button" onclick="toggleP3Button()">ToggleP3Button-onclickScript</button>
+        <p id="P3buttonState">Are both Page 3 Buttons active: <span id="P3activeValue">false</span></p>
+        <a href="page3.html">
+          <button id="P3Button" disabled>
+            ButtonInsideHyperlink-hrefP3
+          </button>
+          <button class="hyperlink button" type="button">
+            ButtonInsideHyperlink-hrefP3
+          </button>
+        </a>
+        <script>
+          let P3activeValue = false;
+          function toggleP3Button() {
+            P3activeValue = !P3activeValue;
+            document.getElementById("P3activeValue").innerText = P3activeValue.toString();
+            const P3Button = document.getElementById("P3Button");
+            P3Button.disabled = !P3Button.disabled;
+          }
+        </script>
+      </td>
+      <td>
+        Clicking the top button enables or disables the first lower button via a script that is triggered via an onclick attribute. The second lower button is always enabled.
+      </td>
+    </tr>
+
+</table>
 </section>
 
 
 <section id="secHyperlinks" aria-labelledby="secHyperlinksHeading">
 <h2 id="secHyperlinksHeading">Hyperlinks</h2>
 
-  <a href="https://example.com/">
-    https://example.com/-hrefEx
-  </a>
+  <table>
+    <tr>
+      <td>
+        <a href="https://example.com/">
+          https://example.com/-hrefEx
+        </a>
+      </td>
+      <td>
+        A basic hyperlink using &lt;a&gt; with a href attribute.
+      </td>
+    </tr>
+  </table>
 
 </section>
 
