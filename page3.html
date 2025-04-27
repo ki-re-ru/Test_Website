@@ -40,13 +40,13 @@
     </tr>
     <tr>
       <td>
-        <label for="button-enabler">A</label>
+        <label for="button-enabler">A1</label>
         <select id="button-enabler" name="button-enabler" onchange="checkSelection()">
           <option value="No">No</option>
           <option value="Yes">Yes</option>
         </select>
         <a href="https://example.com">
-          <button id="ExampleButton" disabled>B</button>
+          <button id="ExampleButton" disabled>A2</button>
         </a>
         <script>
           function checkSelection() {
@@ -67,7 +67,7 @@
         </script>
       </td>
       <td>
-        A:
+        A1:
         <br>
         &lt;select onchange=toggleB&gt;
         <br>
@@ -78,7 +78,7 @@
         &lt;/select&gt;
         <br>
         <br>
-        B:
+        A2:
         <br>
         &lt;a href=example&gt;
         <br>
@@ -89,7 +89,35 @@
         &lt;/a&gt;
       </td>
       <td>
-        A select element A that has the options Yes or No. It enables or disables button B via a script that is triggered by an onchange attribute. B links to the example website.
+        A select element A1 that has the options Yes or No. It enables or disables button A2 via a script that is triggered by an onchange attribute. A2 links to the example website.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>
+          B1 <input type="checkbox" id="checkbox" onchange="checkboxChanged()">
+        </label>
+        <a href="https://example.com">
+          <button id="ExampleButton2" disabled>B2</button>
+        </a>
+
+        <script>
+          function checkboxChanged() {
+            const checkbox = document.getElementById('checkbox');
+            let button = document.getElementById("ExampleButton2");
+            if (checkbox.checked) {
+              button.disabled = false;
+            } else {
+              button.disabled = true;
+            }
+          }
+        </script>
+      </td>
+      <td>
+
+      </td>
+      <td>
+        A checkbox B1 that disables or enables button B2 via a script that is triggered by an onchange attribute. B2 links to the example website.
       </td>
     </tr>
   </table>
