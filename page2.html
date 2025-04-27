@@ -51,6 +51,11 @@
                 menu.style.display = (menu.style.display === "block") ? "none" : "block";
             }
         </script>
+        <script>
+          window.onload = function () {
+            document.getElementById("dropdownMenu").style.display = "none"; // Set default visibility
+          };
+        </script>
       </td>
       <td>
         &lt;button onclick=toggleDropdown&gt;
