@@ -1,26 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <link rel="stylesheet" href="style.css"/>
-    <title>Page 1</title>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Page 1</title>
 </head>
 <body>
 
 <header>
-    <h1 id="artPage1Heading">Test Website - Page 1</h1>
+  <h1>Test Website - Page 1</h1>
 </header>
 
-<section id="secButtons" aria-labelledby="secButtonsHeading">
-    <h2 id="secButtonsHeading">Buttons</h2>
+<section>
+  <h2>Map & Areas</h2>
 
-    <a href="page2.html">
-        <button class="hyperlink button" type="button">
-            ButtonInsideHyperlink-hrefP2
-        </button>
-    </a>
+  <table>
+    <colgroup>
+      <col style="width: 18%;">
+      <col style="width: 30%;">
+    </colgroup>
+    <tr>
+      <td>
+        <b>
+          Elements
+        </b>
+      </td>
+      <td>
+        <b>
+          Structure
+        </b>
+      </td>
+      <td>
+        <b>
+          Notes
+        </b>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="index.html" aria-label="D">
+          <!-- can be clicked in the parts of the image that is not an area -->
+          <map name="map-example">
+            <area
+                    shape="circle"
+                    coords="75,75,75"
+                    href="page2.html"
+                    alt="Click to go to page 2"
+                    aria-label="A"/>
+            <area
+                    shape="circle"
+                    coords="275,75,75"
+                    href="page3.html"
+                    alt="Click to go to page 3"
+                    aria-label="B"/>
+            <area
+                    shape="circle"
+                    coords="275,75,75"
+                    href="https://example.com/"
+                    alt="Click to go to example"
+                    aria-label="C-covered"/> <!-- COVERED: same position, size etc as area above  -->
+          </map>
+          <img
+                  usemap="#map-example"
+                  src="https://dummyimage.com/350x150/000/fff&text=A   B"
+                  alt="map and areas example image"/>
+        </a>
+      </td>
+      <td>
+        &lt;a href=index&gt;
+        <br>
+        &lt;map&gt;
+        <br>
+        &lt;area href=page2&gt;
+        <br>
+        &lt;area href=page3&gt;
+        <br>
+        &lt;area href=example&gt;
+        <br>
+        &lt;/map&gt;
+        <br>
+        &lt;/a&gt;
+      </td>
+      <td>
+        This is a map with 3 circular areas. Area A links to Page 2. Area B links to Page 3. Area C, which is completely
+        covered by Area B, links to the example website. The space inside the map outside the areas (D) links to the start
+        page.
+      </td>
+    </tr>
+  </table>
+
 </section>
 
 

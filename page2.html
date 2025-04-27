@@ -1,21 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <link rel="stylesheet" href="style.css"/>
-    <title>Page 2</title>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Page 2</title>
 </head>
 <body>
 
 <header>
-    <h1 id="artPage2Heading">Test Website - Page 2</h1>
+  <h1>Test Website - Page 2</h1>
 </header>
-<a href="page3.html">
-    <button class="hyperlink button" type="button">
-        ButtonInsideHyperlink-hrefP3
-    </button>
-</a>
+
+<section>
+  <h2>Dropdowns</h2>
+
+  <table>
+    <colgroup>
+      <col style="width: 18%;">
+      <col style="width: 30%;">
+    </colgroup>
+    <tr>
+      <td>
+        <b>
+          Elements
+        </b>
+      </td>
+      <td>
+        <b>
+          Structure
+        </b>
+      </td>
+      <td>
+        <b>
+          Notes
+        </b>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button onclick="toggleDropdown()">A</button>
+        <ul id="dropdownMenu" class="dropdown-content" hidden>
+          <li><a href="page3.html" >B</a></li>
+          <li><a href="https://example.com/" >C</a></li>
+        </ul>
+        <script>
+            function toggleDropdown() {
+                let menu = document.getElementById("dropdownMenu");
+                menu.style.display = (menu.style.display === "block") ? "none" : "block";
+            }
+        </script>
+      </td>
+      <td>
+        &lt;button onclick=toggleDropdown&gt;
+        <br>
+        &lt;/button&gt;
+        <br>
+        &lt;ul hidden&gt;
+        <br>
+        &lt;li&gt;&lt;a href=page3&gt;&lt;/a&gt;&lt;/li&gt;
+        <br>
+        &lt;li&gt;&lt;a href=example&gt;&lt;/a&gt;&lt;/li&gt;
+        <br>
+        &lt;/ul&gt;
+      </td>
+      <td>
+        A button A that expands a dropdown menu via an onclick script. The dropdown options are hyperlinks, that link to Page 3 (B) and the example website (C).
+      </td>
+    </tr>
+  </table>
+
+</section>
 </body>
 </html>

@@ -114,6 +114,11 @@ h1 {
   text-align: center;
 }
 
+.highlight-area{
+  outline: 2px solid rgba(255, 0, 0, 0.7);
+  z-index: 10;
+}
+
 h2 {
   margin: 1.5em 0 0.5em 0;
   font-weight: bold;
@@ -293,9 +298,9 @@ sup {font-size: 60%}
 
 .square {
  width: 500px;
- border: 2px solid black; /* makes the visible square */
+ border: 2px solid black;
  display: flex;
- flex-direction: column; /* <<< this makes them stack vertically */
+ flex-direction: column;
  gap: 0px;
  padding: 10px;
  align-items: center;
