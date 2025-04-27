@@ -14,7 +14,7 @@
 </header>
 
 <section>
-  <h2>onchange</h2>
+  <h2>Selections & Choices</h2>
 
   <table>
     <colgroup>
@@ -89,7 +89,7 @@
         &lt;/a&gt;
       </td>
       <td>
-        A select element A1 that has the options Yes or No. It enables or disables button A2 via a script that is triggered by an onchange attribute. A2 links to the example website.
+        A select element A1 that has the options Yes or No. It enables or disables button A2 via a script that is triggered by an <b>onchange</b> attribute. A2 links to the example website.
       </td>
     </tr>
     <tr>
@@ -114,10 +114,91 @@
         </script>
       </td>
       <td>
-
+        B1:
+        <br>
+        &lt;input type=checkbox onchange&gt;
+        <br>
+        <br>
+        B2:
+        <br>
+        &lt;a href=example&gt;<br>&lt;button&gt;<br>&lt;/button&gt;<br>&lt;/a&gt;
       </td>
       <td>
-        A checkbox B1 that disables or enables button B2 via a script that is triggered by an onchange attribute. B2 links to the example website.
+        A checkbox B1 that disables or enables button B2 via a script that is triggered by an <b>onchange</b> attribute. B2 links to the example website.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>
+          C1 <input type="checkbox" id="checkbox2" onclick="checkboxClicked()">
+        </label>
+        <a href="https://example.com">
+          <button id="ExampleButton3" disabled>C2</button>
+        </a>
+
+        <script>
+          function checkboxClicked() {
+            const checkbox = document.getElementById('checkbox2');
+            let button = document.getElementById("ExampleButton3");
+            if (checkbox.checked) {
+              button.disabled = false;
+            } else {
+              button.disabled = true;
+            }
+          }
+        </script>
+      </td>
+      <td>
+        B1:
+        <br>
+        &lt;input type=checkbox onclick&gt;
+        <br>
+        <br>
+        B2:
+        <br>
+        &lt;a href=example&gt;<br>&lt;button&gt;<br>&lt;/button&gt;<br>&lt;/a&gt;
+      </td>
+      <td>
+        A checkbox C1 that disables or enables button C2 via a script that is triggered by an <b>onclick</b> attribute. C2 links to the example website.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>
+          D1-Yes <input type="radio" name="choice" id="radioYes" onchange="radioChanged()">
+        </label>
+        <label>
+          D2-No <input type="radio" name="choice" id="radioNo" onchange="radioChanged()">
+        </label>
+        <a href="https://example.com">
+          <button id="ExampleButton4" disabled>D3</button>
+        </a>
+
+        <script>
+          function radioChanged() {
+            const radioYes = document.getElementById('radioYes');
+            let button = document.getElementById("ExampleButton4");
+            if (radioYes.checked) {
+              button.disabled = false;
+            } else {
+              button.disabled = true;
+            }
+          }
+        </script>
+      </td>
+      <td>
+        D1 & D2:
+        <br>
+        &lt;input type=radio onchange=checkToggleC3&gt;
+        &lt;input type=radio onchange=checkToggleC3&gt;
+        <br>
+        <br>
+        D3:
+        <br>
+        &lt;a href=example&gt;<br>&lt;button&gt;<br>&lt;/button&gt;<br>&lt;/a&gt;
+      </td>
+      <td>
+        Two radio buttons D1 and D2, that are grouped together using a name attribute, so that only one can be selected. If D1 is selected, button D3 is enabled. If D2 is selected, button D3 is disabled. This is achieved with a script that is triggered by an <b>onchange</b> attribute. D3 links to the example website.
       </td>
     </tr>
   </table>
