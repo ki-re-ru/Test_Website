@@ -41,7 +41,7 @@
     <tr>
       <td>
         <button onclick="toggleDropdown()">A</button>
-        <ul id="dropdownMenu" class="dropdown-content">
+        <ul id="dropdownMenu" class="dropdown-content" hidden>
           <li><a href="page3.html" >B</a></li>
           <li><a href="https://example.com/" >C</a></li>
         </ul>
@@ -50,11 +50,6 @@
                 let menu = document.getElementById("dropdownMenu");
                 menu.style.display = (menu.style.display === "block") ? "none" : "block";
             }
-        </script>
-        <script>
-          window.onload = function () {
-            document.getElementById("dropdownMenu").style.display = "none"; // Set default visibility
-          };
         </script>
       </td>
       <td>
