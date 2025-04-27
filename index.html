@@ -22,136 +22,202 @@
 </header>
 
 
-<section id="secButtons" aria-labelledby="secButtonsHeading">
-<h2 id="secButtonsHeading">Buttons</h2>
+  <section id="secHyperlinks" aria-labelledby="secHyperlinksHeading">
+    <h2 id="secHyperlinksHeading">Hyperlinks</h2>
 
-  <!--COPY PASTE TEMPLATE
-    <tr>
-      <td>
-
-      </td>
-      <td>
-
-      </td>
-    </tr>
-  -->
-
-  <table>
-    <tr>
-      <td>
-        <button class="nothing button" type="button">Do nothing</button>
-      </td>
-      <td>
-        This button does nothing and has no interactive attributes.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://example.com/">
-          <button class="hyperlink button" type="button">
-            ButtonInsideHyperlink-hrefEx
-          </button>
-        </a>
-      </td>
-      <td>
-        &lt;a href=example&gt;&lt;button&gt;&lt;/button&gt;&lt;/a&gt;
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <button class="hyperlink button" type="button">
+    <table>
+      <tr>
+        <td>
+          <b>
+            Elements
+          </b>
+        </td>
+        <td>
+          <b>
+            Structure
+          </b>
+        </td>
+        <td>
+          <b>
+            Notes
+          </b>
+        </td>
+      </tr>
+      <tr>
+        <td>
           <a href="https://example.com/">
-            HyperlinkInsideButton-hrefEx
+            A
           </a>
-        </button>
-      </td>
-      <td>
-        &lt;button&gt;&lt;a href=example&gt;&lt;/a&gt;&lt;/button&gt;
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="page1.html">
-          <button class="P1button" type="button">
-            ButtonInsideHyperlink-hrefP1
+        </td>
+        <td>
+          &lt;a href=example&gt;<br>&lt;/a&gt;
+        </td>
+        <td>
+          A basic hyperlink using an anchor tag with a href attribute. Links to the example website.
+        </td>
+      </tr>
+    </table>
+
+  </section>
+
+  <section id="secButtons" aria-labelledby="secButtonsHeading">
+  <h2 id="secButtonsHeading">Buttons</h2>
+
+    <!--COPY PASTE TEMPLATE
+      <tr>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+      </tr>
+    -->
+
+    <table>
+      <tr>
+        <td>
+          <b>
+            Elements
+          </b>
+        </td>
+        <td>
+          <b>
+            Structure
+          </b>
+        </td>
+        <td>
+          <b>
+            Notes
+          </b>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button>
+            B
           </button>
-        </a>
-      </td>
-      <td>
-        &lt;a href=page1&gt;&lt;button&gt;&lt;/button&gt;&lt;/a&gt;
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <button id="togglePage2Button" onclick="toggleP2Button()">ToggleP2Button-onclickScript</button>
-        <p id="P2buttonState">Is Page 2 Button active: <span id="P2activeValue">false</span></p>
-        <a href="page2.html">
-          <button id="P2Button" disabled>
-            ButtonInsideHyperlink-hrefP2
-          </button>
-        </a>
-        <script>
-          let P2activeValue = false;
-          function toggleP2Button() {
-            P2activeValue = !P2activeValue;
-            document.getElementById("P2activeValue").innerText = P2activeValue.toString();
-            const P2Button = document.getElementById("P2Button");
-            P2Button.disabled = !P2Button.disabled;
-          }
-        </script>
-      </td>
-      <td>
-        Clicking the first button enables or disables the second button via a script that is triggered via an onclick attribute.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <button id="togglePage3Button" onclick="toggleP3Button()">ToggleP3Button-onclickScript</button>
-        <p id="P3buttonState">Are both Page 3 Buttons active: <span id="P3activeValue">false</span></p>
-        <a href="page3.html">
-          <button id="P3Button" disabled>
-            ButtonInsideHyperlink-hrefP3
-          </button>
+        </td>
+        <td>
+          &lt;button&gt;<br>&lt;/button&gt;
+        </td>
+        <td>
+          This button does nothing and has no interactive attributes.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="https://example.com/">
+            <button>
+              C
+            </button>
+          </a>
+        </td>
+        <td>
+          &lt;a href=example&gt;<br>&lt;button&gt;<br>&lt;/button&gt;<br>&lt;/a&gt;
+        </td>
+        <td>
+          A button wrapped within an anchor tag. Links to the example website.
+        </td>
+      </tr>
+      <tr>
+        <td>
           <button class="hyperlink button" type="button">
-            ButtonInsideHyperlink-hrefP3
+            <a href="https://example.com/">
+              D
+            </a>
           </button>
-        </a>
-        <script>
-          let P3activeValue = false;
-          function toggleP3Button() {
-            P3activeValue = !P3activeValue;
-            document.getElementById("P3activeValue").innerText = P3activeValue.toString();
-            const P3Button = document.getElementById("P3Button");
-            P3Button.disabled = !P3Button.disabled;
-          }
-        </script>
-      </td>
-      <td>
-        Clicking the top button enables or disables the first lower button via a script that is triggered via an onclick attribute. The second lower button is always enabled.
-      </td>
-    </tr>
+        </td>
+        <td>
+          &lt;button&gt;<br>&lt;a href=example&gt;<br>&lt;/a&gt;<br>&lt;/button&gt;
+        </td>
+        <td>
+          An anchor tag wrapped within a button. Links to the example website.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <a href="page1.html">
+            <button class="P1button" type="button">
+              E
+            </button>
+          </a>
+        </td>
+        <td>
+          &lt;a href=page1&gt;<br>&lt;button&gt;<br>&lt;/button&gt;<br>&lt;/a&gt;
+        </td>
+        <td>
+          A button wrapped within an anchor tag. Links to Page 1.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button id="togglePage2Button" onclick="toggleP2Button()">F1</button>
+          <p id="P2buttonState">Is F2 Button active: <span id="P2activeValue">false</span></p>
+          <a href="page2.html">
+            <button id="P2Button" disabled>
+              F2
+            </button>
+          </a>
+          <script>
+            let P2activeValue = false;
+            function toggleP2Button() {
+              P2activeValue = !P2activeValue;
+              document.getElementById("P2activeValue").innerText = P2activeValue.toString();
+              const P2Button = document.getElementById("P2Button");
+              P2Button.disabled = !P2Button.disabled;
+            }
+          </script>
+        </td>
+        <td>
+          F1: <br>&lt;button onclick=toggleF2&gt;<br>&lt;/button&gt;
+          <br>
+          <br>
+          F2: <br>&lt;a href=page2&gt;<br>&lt;button&gt;<br>&lt;/button&gt;<br>&lt;/a&gt;
+        </td>
+        <td>
+          Clicking the F1 button enables or disables the F2 button via a script that is triggered via an onclick attribute. The F2 button links to Page 2.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button id="togglePage3Button" onclick="toggleP3Button()">G1</button>
+          <p id="P3buttonState">Is G2 button active: <span id="P3activeValue">false</span></p>
+          <a href="page3.html">
+            <button id="P3Button" disabled>
+              G2
+            </button>
+            <button class="hyperlink button" type="button">
+              G3
+            </button>
+          </a>
+          <script>
+            let P3activeValue = false;
+            function toggleP3Button() {
+              P3activeValue = !P3activeValue;
+              document.getElementById("P3activeValue").innerText = P3activeValue.toString();
+              const P3Button = document.getElementById("P3Button");
+              P3Button.disabled = !P3Button.disabled;
+            }
+          </script>
+        </td>
+        <td>
+          G1: <br>&lt;button onclick=toggleG2&gt;<br>&lt;/button&gt;
+          <br>
+          <br>
+          G2 & G3: <br>&lt;a href=page2&gt;<br>&lt;button&gt;<br>&lt;/button&gt;<br>&lt;button&gt;<br>&lt;/button&gt;<br>&lt;/a&gt;
 
-</table>
-</section>
+        </td>
+        <td>
+          Clicking the G1 button enables or disables the G2 button via a script that is triggered via an onclick attribute. The G3 button is always enabled. Both G2 and G3 are inside the same anchor tag. This is to test behaviour for partially disabled groupings.
+        </td>
+      </tr>
 
-
-<section id="secHyperlinks" aria-labelledby="secHyperlinksHeading">
-<h2 id="secHyperlinksHeading">Hyperlinks</h2>
-
-  <table>
-    <tr>
-      <td>
-        <a href="https://example.com/">
-          https://example.com/-hrefEx
-        </a>
-      </td>
-      <td>
-        A basic hyperlink using &lt;a&gt; with a href attribute.
-      </td>
-    </tr>
   </table>
-
-</section>
+  </section>
 
 
 </article>
