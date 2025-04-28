@@ -76,7 +76,14 @@ code, var, kbd, samp, listing, plaintext, xmp, abbr {
   hyphens: none;
 }
 
-
+.dropdown-content {
+  position: relative;
+  background-color: #d3d3d3;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  z-index: 10;
+}
 
 div {
   margin: 0;

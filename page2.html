@@ -40,10 +40,10 @@
     </tr>
     <tr>
       <td>
-        <button onclick="toggleDropdown()">A</button>
+        <button onclick="toggleDropdown()">A1</button>
         <ul id="dropdownMenu" class="dropdown-content" hidden>
-          <li><a href="page3.html" >B</a></li>
-          <li><a href="https://example.com/" >C</a></li>
+          <li><a href="page3.html" >A2</a></li>
+          <li><a href="https://example.com/" >A3</a></li>
         </ul>
         <script>
             function toggleDropdown() {
@@ -66,7 +66,71 @@
         &lt;/ul&gt;
       </td>
       <td>
-        A button A that expands a dropdown menu via an onclick script. The dropdown options are hyperlinks, that link to Page 3 (B) and the example website (C).
+        A button A1 that expands a dropdown menu via an <b>onclick</b> script. The dropdown options are hyperlinks, that link to Page 3 (A2) and the example website (A3).
+      </td>
+    </tr>
+    <tr>
+      <td>
+          <div onmouseenter="toggleDropdown2()" onmouseleave="toggleDropdown2()">B1
+          <ul id="dropdownMenu2" class="dropdown-content" hidden>
+            <li><a href="page3.html" >B2</a></li>
+            <li><a href="https://example.com/" >B3</a></li>
+          </ul>
+          </div>
+          <script>
+            function toggleDropdown2() {
+              let menu = document.getElementById("dropdownMenu2");
+              menu.style.display = (menu.style.display === "block") ? "none" : "block";
+            }
+          </script>
+      </td>
+      <td>
+        &lt;div onmouseenter=toggleDropdown onmouseleave=toggleDropdown&gt;
+        <br>
+        &lt;ul hidden&gt;
+        <br>
+        &lt;li&gt;&lt;a href=page3&gt;&lt;/a&gt;&lt;/li&gt;
+        <br>
+        &lt;li&gt;&lt;a href=example&gt;&lt;/a&gt;&lt;/li&gt;
+        <br>
+        &lt;/ul&gt;
+        <br>
+        &lt;/div&gt;
+      </td>
+      <td>
+        Hovering over B1 will open a dropdown menu. The behaviour is triggered with <b>onmouseenter</b> and <b>onmouseleave</b>. The dropdown options are hyperlinks, that link to Page 3 (B2) and the example website (B3).
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div onmouseover="toggleDropdown3()" onmouseout="toggleDropdown3()">C1
+          <ul id="dropdownMenu3" class="dropdown-content" hidden>
+            <li><a href="page3.html" >C2</a></li>
+            <li><a href="https://example.com/" >C3</a></li>
+          </ul>
+        </div>
+        <script>
+          function toggleDropdown3() {
+            let menu = document.getElementById("dropdownMenu3");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+          }
+        </script>
+      </td>
+      <td>
+        &lt;div onmouseover=toggleDropdown onmouseout=toggleDropdown&gt;
+        <br>
+        &lt;ul hidden&gt;
+        <br>
+        &lt;li&gt;&lt;a href=page3&gt;&lt;/a&gt;&lt;/li&gt;
+        <br>
+        &lt;li&gt;&lt;a href=example&gt;&lt;/a&gt;&lt;/li&gt;
+        <br>
+        &lt;/ul&gt;
+        <br>
+        &lt;/div&gt;
+      </td>
+      <td>
+        Hovering over C1 will open a dropdown menu. The behaviour is triggered with <b>onmouseover</b> and <b>onmouseout</b>. The dropdown options are hyperlinks, that link to Page 3 (C2) and the example website (C3).
       </td>
     </tr>
   </table>
