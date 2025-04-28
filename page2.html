@@ -40,17 +40,11 @@
     </tr>
     <tr>
       <td>
-        <button onclick="toggleDropdown()">A1</button>
-        <ul id="dropdownMenu" class="dropdown-content" hidden>
+        <button onclick="toggleDropdown('dropdownMenu1')">A1</button>
+        <ul id="dropdownMenu1" class="dropdown-content" hidden>
           <li><a href="page3.html" >A2</a></li>
           <li><a href="https://example.com/" >A3</a></li>
         </ul>
-        <script>
-            function toggleDropdown() {
-                let menu = document.getElementById("dropdownMenu");
-                menu.style.display = (menu.style.display === "block") ? "none" : "block";
-            }
-        </script>
       </td>
       <td>
         &lt;button onclick=toggleDropdown&gt;
@@ -71,18 +65,12 @@
     </tr>
     <tr>
       <td>
-          <div onmouseenter="toggleDropdown2()" onmouseleave="toggleDropdown2()">B1
+          <div onmouseenter="toggleDropdown('dropdownMenu2')" onmouseleave="toggleDropdown('dropdownMenu2')">B1
           <ul id="dropdownMenu2" class="dropdown-content" hidden>
             <li><a href="page3.html" >B2</a></li>
             <li><a href="https://example.com/" >B3</a></li>
           </ul>
           </div>
-          <script>
-            function toggleDropdown2() {
-              let menu = document.getElementById("dropdownMenu2");
-              menu.style.display = (menu.style.display === "block") ? "none" : "block";
-            }
-          </script>
       </td>
       <td>
         &lt;div onmouseenter=toggleDropdown onmouseleave=toggleDropdown&gt;
@@ -103,18 +91,12 @@
     </tr>
     <tr>
       <td>
-        <div onmouseover="toggleDropdown3()" onmouseout="toggleDropdown3()">C1
+        <div onmouseover="toggleDropdown('dropdownMenu3')" onmouseout="toggleDropdown('dropdownMenu3')">C1
           <ul id="dropdownMenu3" class="dropdown-content" hidden>
             <li><a href="page3.html" >C2</a></li>
             <li><a href="https://example.com/" >C3</a></li>
           </ul>
         </div>
-        <script>
-          function toggleDropdown3() {
-            let menu = document.getElementById("dropdownMenu3");
-            menu.style.display = (menu.style.display === "block") ? "none" : "block";
-          }
-        </script>
       </td>
       <td>
         &lt;div onmouseover=toggleDropdown onmouseout=toggleDropdown&gt;
@@ -134,6 +116,12 @@
       </td>
     </tr>
   </table>
+  <script>
+    function toggleDropdown(id) {
+      let menu = document.getElementById(id);
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+  </script>
 
 </section>
 </body>
