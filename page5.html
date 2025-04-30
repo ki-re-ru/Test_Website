@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <link rel="stylesheet" href="style.css"/>
+  <title>Page 5</title>
+</head>
+<body>
+
+<header>
+  <h1>Test Website - Page 4</h1>
+</header>
+
+<section>
+  <h2>Attribute Combinations</h2>
+
+  <table>
+    <colgroup>
+      <col style="width: 18%;">
+      <col style="width: 30%;">
+    </colgroup>
+    <tr>
+      <td>
+        <b>
+          Elements
+        </b>
+      </td>
+      <td>
+        <b>
+          Structure
+        </b>
+      </td>
+      <td>
+        <b>
+          Notes
+        </b>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://example.com/" onclick="alert('onclick')">A</a>
+      </td>
+      <td>
+        &lt;a href=example onclick=alert&gt;<br>&lt;/a&gt;
+      </td>
+      <td>
+        Anchor tag with 2 attributes: href, onclick
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://example.com/" onchange="alert('onchange - hyperlink')">B</a>
+      </td>
+      <td>
+        &lt;a href=example onchange=alert&gt;<br>&lt;/a&gt;
+      </td>
+      <td>
+        Anchor tag with 2 attributes: href, onchange
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://example.com/" onmouseenter="alert('onmouseenter!')">C</a>
+      </td>
+      <td>
+        &lt;a href=example onmouseenter=alert&gt;<br>&lt;/a&gt;
+      </td>
+      <td>
+        Anchor tag with 2 attributes: href, onmouseenter. The href cannot be clicked after moving the mouse here, because an alert opens.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://example.com/" onmouseenter="toggleSecretText()">D</a>
+        <span id="secret" hidden>This is a secret text!</span>
+      </td>
+      <td>
+        &lt;a href=example onmouseenter=alert&gt;<br>&lt;/a&gt;
+      </td>
+      <td>
+        Anchor tag with 2 attributes: href, onmouseenter. The href can still be clicked after moving the mouse here because it just causes text to appear. It leads to the example website.
+      </td>
+      <script>
+        function toggleSecretText() { let text = document.getElementById('secret');
+          text.style.display = (text.style.display === "block") ? "none" : "block";}
+      </script>
+    </tr>
+  </table>
+
+</section>
+
+
+<br>
+
+
+</body>
+</html>
