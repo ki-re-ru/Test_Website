@@ -86,14 +86,14 @@
     </tr>
     <tr>
       <td>
-        <label for="D">D</label>
-        <select id="D" onclick="window.location.href='https://example.com/';" onchange="checkSelection()">
+        <label for="E">E</label>
+        <select id="E" onclick="window.location.href='https://example.com/';" onchange="checkSelection()">
           <option value="Stay">Stay</option>
           <option value="Go">Go</option>
         </select>
         <script>
           function checkSelection() {
-            let select = document.getElementById("D");
+            let select = document.getElementById("E");
             if (select.value === "Go") {
               window.location.href='index.html'
             }
@@ -102,7 +102,7 @@
 
         <script>
           window.onload = function () {
-            document.getElementById("D").value = "Stay"; // Set default selection
+            document.getElementById("E").value = "Stay"; // Set default selection
           };
         </script>
       </td>
