@@ -15,7 +15,7 @@
 
 <section>
   <h2>Attribute Combinations</h2>
-
+  <span>Alerts are disabled when running the learning algorithm!</span>
   <table>
     <colgroup>
       <col style="width: 18%;">
@@ -40,7 +40,7 @@
     </tr>
     <tr>
       <td>
-        <a href="https://example.com/">A</a> <!--onclick="alert('onclick')-->
+        <a href="https://example.com/" onclick="alert('onclick')">A</a>
       </td>
       <td>
         &lt;a href=example onclick=alert&gt;<br>&lt;/a&gt;
@@ -68,7 +68,7 @@
         &lt;a href=example onmouseenter=alert&gt;<br>&lt;/a&gt;
       </td>
       <td>
-        Anchor tag with 2 attributes: href, onmouseenter. The href cannot be clicked after moving the mouse here, because an alert opens.
+        Anchor tag with 2 attributes: href, onmouseenter. The href cannot be clicked manually after moving the mouse here, because an alert opens.
       </td>
     </tr>
     <tr>
@@ -80,7 +80,7 @@
         &lt;a href=example onmouseenter=toggletext&gt;<br>&lt;/a&gt;
       </td>
       <td>
-        Anchor tag with 2 attributes: href, onmouseenter. The href can still be clicked after moving the mouse here because it just causes text to appear. It leads to the example website.
+        Anchor tag with 2 attributes: href, onmouseenter. The href can still be clicked manually after moving the mouse here because it just causes text to appear. It leads to the example website.
       </td>
       <script>
         function toggleSecretText() { let text = document.getElementById('secret');
