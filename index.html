@@ -37,191 +37,33 @@
 
 
   <section>
-  <h2>Hyperlinks</h2>
+  <h2>Subpages</h2>
 
-    <table>
-      <colgroup>
-        <col style="width: 18%;">
-        <col style="width: 30%;">
-      </colgroup>
-      <tr>
-        <td>
-          <b>
-            Elements
-          </b>
-        </td>
-        <td>
-          <b>
-            Structure
-          </b>
-        </td>
-        <td>
-          <b>
-            Notes
-          </b>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="https://example.com/">A</a>
-        </td>
-        <td>
-          &lt;a href=example&gt;<br>&lt;/a&gt;
-        </td>
-        <td>
-          A basic hyperlink using an anchor tag with a href attribute. Links to the example website.
-        </td>
-      </tr>
-    </table>
+    <a href="basics.html">
+      Basics: Hyperlinks & Buttons
+    </a>
+    <br>
+    <a href="map-areas.html">
+      Map & Areas
+    </a>
+    <br>
+    <a href="dropdowns.html">
+      Dropdowns
+    </a>
+    <br>
+    <a href="checkboxes.html">
+      Checkboxes
+    </a>
+    <br>
+    <a href="selections-choices.html">
+      Selections & Choices
+    </a>
+    <br>
+    <a href="attribute_combinations.html">
+      Attribute Combinations
+    </a>
+    <br>
 
-  </section>
-
-  <section>
-  <h2>Buttons</h2>
-
-    <table>
-      <colgroup>
-        <col style="width: 18%;">
-        <col style="width: 30%;">
-      </colgroup>
-      <tr>
-        <td>
-          <b>
-            Elements
-          </b>
-        </td>
-        <td>
-          <b>
-            Structure
-          </b>
-        </td>
-        <td>
-          <b>
-            Notes
-          </b>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button>
-            B
-          </button>
-        </td>
-        <td>
-          &lt;button&gt;<br>&lt;/button&gt;
-        </td>
-        <td>
-          This button does nothing and has no interactive attributes.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <a href="page4.html">
-            <button>
-              C
-            </button>
-          </a>
-        </td>
-        <td>
-          &lt;a href=page4&gt;<br>&lt;button&gt;<br>&lt;/button&gt;<br>&lt;/a&gt;
-        </td>
-        <td>
-          A button wrapped within an anchor tag. Links to Page 4.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button>
-            <a href="page1.html">
-              D
-            </a>
-          </button>
-        </td>
-        <td>
-          &lt;button&gt;<br>&lt;a href=page1&gt;<br>&lt;/a&gt;<br>&lt;/button&gt;
-        </td>
-        <td>
-          An anchor tag wrapped within a button. Links to Page 1.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button onclick="toggleP2Button()">E1</button>
-          <p>E2 Button active: <span id="P2activeValue">false</span></p>
-          <a href="page2.html">
-            <button id="P2Button" disabled>
-              E2
-            </button>
-          </a>
-          <script>
-            let P2activeValue = false;
-            function toggleP2Button() {
-              P2activeValue = !P2activeValue;
-              document.getElementById("P2activeValue").innerText = P2activeValue.toString();
-              const P2Button = document.getElementById("P2Button");
-              P2Button.disabled = !P2Button.disabled;
-            }
-          </script>
-        </td>
-        <td>
-          E1: <br>&lt;button onclick=toggleE2&gt;<br>&lt;/button&gt;
-          <br>
-          <br>
-          E2: <br>&lt;a href=page2&gt;<br>&lt;button&gt;<br>&lt;/button&gt;<br>&lt;/a&gt;
-        </td>
-        <td>
-          Clicking the E1 button enables or disables the E2 button via a script that is triggered via an onclick attribute. The E2 button links to Page 2.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button onclick="toggleP3Button()">F1</button>
-          <p>F2 button active: <span id="P3activeValue">false</span></p>
-          <a href="page3.html">
-            <button id="P3Button" disabled>
-              F2
-            </button>
-            <button>
-              F3
-            </button>
-          </a>
-          <script>
-            let P3activeValue = false;
-            function toggleP3Button() {
-              P3activeValue = !P3activeValue;
-              document.getElementById("P3activeValue").innerText = P3activeValue.toString();
-              const P3Button = document.getElementById("P3Button");
-              P3Button.disabled = !P3Button.disabled;
-            }
-          </script>
-        </td>
-        <td>
-          F1: <br>&lt;button onclick=toggleF2&gt;<br>&lt;/button&gt;
-          <br>
-          <br>
-          F2 & F3: <br>&lt;a href=page2&gt;<br>&lt;button&gt;<br>&lt;/button&gt;<br>&lt;button&gt;<br>&lt;/button&gt;<br>&lt;/a&gt;
-
-        </td>
-        <td>
-          Clicking the F1 button enables or disables the F2 button via a script that is triggered via an onclick attribute. The F3 button is always enabled. Both F2 and F3 are inside the same anchor tag and link to Page 3.
-          <br>
-          This is used to test behaviour for partially disabled groupings.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button onclick="alert('Clicked button!')">
-            G
-          </button>
-        </td>
-        <td>
-          &lt;button onclick=alert&gt;<br>&lt;/button&gt;
-        </td>
-        <td>
-          Clicking this button opens an alert via an onclick attribute.
-        </td>
-      </tr>
-  </table>
   <script>
     alert('Welcome to the Test Website!')
   </script>
