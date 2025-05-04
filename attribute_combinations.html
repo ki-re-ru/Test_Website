@@ -128,6 +128,43 @@
         Anchor tag with 2 attributes: href, onmouseenter
       </td>
     </tr>
+    <tr>
+      <td>
+        <label for="G">G</label>
+        <select id="G" onmouseenter="changeSelection()" onchange="window.location.href='index.html';">
+          <option value="hello">Hello!</option>
+          <option value="bye">Bye!</option>
+        </select>
+        <script>
+          function changeSelection() {
+            let select = document.getElementById("G")
+            if (select.value === "hello") {
+              select.value = "bye";
+            } else {
+              select.value = "hello";
+            }
+          }
+        </script>
+
+        <script>
+          window.onload = function () {
+            document.getElementById("G").value = "bye"; // Set default selection
+          };
+        </script>
+      </td>
+      <td>
+        &lt;select onmouseenter=changeSelection onchange=index&gt;
+        <br>
+        &lt;option value=hello&gt;
+        <br>
+        &lt;option value=bye&gt;
+        <br>
+        &lt;/select&gt;
+      </td>
+      <td>
+        Select with 2 attributes: onmouseenter, onchange. Hovering above the select does not trigger the onchange event.
+      </td>
+    </tr>
   </table>
 
 </section>
