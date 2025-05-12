@@ -41,8 +41,8 @@
       <td>
         <label for="button-enabler">A1</label>
         <select id="button-enabler" name="button-enabler" onchange="checkSelection()">
-          <option >No</option>
-          <option value="Yes">Yes</option>
+          <option>No</option>
+          <option>Yes</option>
         </select>
         <a href="https://example.com">
           <button id="ExampleButton" disabled>A2</button>
@@ -51,7 +51,7 @@
           function checkSelection() {
             let select = document.getElementById("button-enabler");
             let button = document.getElementById("ExampleButton");
-            if (select.value === "No") {
+            if (select.selectedIndex === 0) {
               button.disabled = true;
             } else {
               button.disabled = false;
@@ -61,7 +61,7 @@
 
         <script>
           window.onload = function () {
-            document.getElementById("button-enabler").value = "No"; // Set default selection
+            document.getElementById("button-enabler").selectedIndex = 0; // Set default selection
           };
         </script>
       </td>
