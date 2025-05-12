@@ -36,87 +36,87 @@
         </b>
       </td>
     </tr>
-<!--    <tr>-->
-<!--      <td>-->
-<!--        <a href="https://example.com/" onclick="window.location.href='index.html';">A</a>-->
-<!--      </td>-->
-<!--      <td>-->
-<!--        &lt;a href=example onclick=index&gt;<br>&lt;/a&gt;-->
-<!--      </td>-->
-<!--      <td>-->
-<!--        Anchor tag with 2 attributes: href, onclick-->
-<!--      </td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td>-->
-<!--        <a onclick="window.location.href='index.html';" href="https://example.com/" >B</a>-->
-<!--      </td>-->
-<!--      <td>-->
-<!--        &lt;a onclick=index href=example&gt;<br>&lt;/a&gt;-->
-<!--      </td>-->
-<!--      <td>-->
-<!--        Anchor tag with 2 attributes: onclick, href (order swapped)-->
-<!--      </td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td>-->
-<!--        <a href="https://example.com/" onchange="window.location.href='index.html';">C</a>-->
-<!--      </td>-->
-<!--      <td>-->
-<!--        &lt;a href=example onchange=index&gt;<br>&lt;/a&gt;-->
-<!--      </td>-->
-<!--      <td>-->
-<!--        Anchor tag with 2 attributes: href, onchange-->
-<!--      </td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td>-->
-<!--        <label>-->
-<!--          D<input type="checkbox" onclick="window.location.href='https://example.com/';" onchange="window.location.href='index.html';">-->
-<!--        </label>-->
-<!--      </td>-->
-<!--      <td>-->
-<!--        &lt;input type=checkbox onclick=example onchange=index&gt;-->
-<!--      </td>-->
-<!--      <td>-->
-<!--        Checkbox with 2 attributes: onclick, onchange-->
-<!--      </td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td>-->
-<!--        <label for="E">E</label>-->
-<!--        <select id="E" onclick="window.location.href='https://example.com/';" onchange="checkSelection()">-->
-<!--          <option value="Stay">Stay</option>-->
-<!--          <option value="Go">Go</option>-->
-<!--        </select>-->
-<!--        <script>-->
-<!--          function checkSelection() {-->
-<!--            let select = document.getElementById("E");-->
-<!--            if (select.value === "Go") {-->
-<!--              window.location.href='index.html'-->
-<!--            }-->
-<!--          }-->
-<!--        </script>-->
+    <tr>
+      <td>
+        <a href="https://example.com/" onclick="window.location.href='index.html';">A</a>
+      </td>
+      <td>
+        &lt;a href=example onclick=index&gt;<br>&lt;/a&gt;
+      </td>
+      <td>
+        Anchor tag with 2 attributes: href, onclick
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a onclick="window.location.href='index.html';" href="https://example.com/" >B</a>
+      </td>
+      <td>
+        &lt;a onclick=index href=example&gt;<br>&lt;/a&gt;
+      </td>
+      <td>
+        Anchor tag with 2 attributes: onclick, href (order swapped)
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://example.com/" onchange="window.location.href='index.html';">C</a>
+      </td>
+      <td>
+        &lt;a href=example onchange=index&gt;<br>&lt;/a&gt;
+      </td>
+      <td>
+        Anchor tag with 2 attributes: href, onchange
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label>
+          D<input type="checkbox" onclick="window.location.href='https://example.com/';" onchange="window.location.href='index.html';">
+        </label>
+      </td>
+      <td>
+        &lt;input type=checkbox onclick=example onchange=index&gt;
+      </td>
+      <td>
+        Checkbox with 2 attributes: onclick, onchange
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="E">E</label>
+        <select id="E" onclick="window.location.href='https://example.com/';" onchange="checkSelection()">
+          <option value="Stay">Stay</option>
+          <option value="Go">Go</option>
+        </select>
+        <script>
+          function checkSelection() {
+            let select = document.getElementById("E");
+            if (select.value === "Go") {
+              window.location.href='index.html'
+            }
+          }
+        </script>
 
-<!--        <script>-->
-<!--          window.onload = function () {-->
-<!--            document.getElementById("E").value = "Stay"; // Set default selection-->
-<!--          };-->
-<!--        </script>-->
-<!--      </td>-->
-<!--      <td>-->
-<!--        &lt;select onclick=example onchange=index&gt;-->
-<!--        <br>-->
-<!--        &lt;option value=Stay&gt;-->
-<!--        <br>-->
-<!--        &lt;option value=Go&gt;-->
-<!--        <br>-->
-<!--        &lt;/select&gt;-->
-<!--      </td>-->
-<!--      <td>-->
-<!--        Select with 2 attributes: onclick, onchange-->
-<!--      </td>-->
-<!--    </tr>-->
+        <script>
+          window.onload = function () {
+            document.getElementById("E").value = "Stay"; // Set default selection
+          };
+        </script>
+      </td>
+      <td>
+        &lt;select onclick=example onchange=index&gt;
+        <br>
+        &lt;option value=Stay&gt;
+        <br>
+        &lt;option value=Go&gt;
+        <br>
+        &lt;/select&gt;
+      </td>
+      <td>
+        Select with 2 attributes: onclick, onchange
+      </td>
+    </tr>
     <tr>
       <td>
         <a href="https://example.com/" onmouseenter="window.location.href='index.html';">F</a>
@@ -128,54 +128,54 @@
         Anchor tag with 2 attributes: href, onmouseenter
       </td>
     </tr>
-<!--    <tr>-->
-<!--      <td>-->
-<!--        <label for="G">G</label>-->
-<!--        <select id="G" onmouseenter="changeSelection()" onchange="window.location.href='index.html';">-->
-<!--          <option value="hello">Hello!</option>-->
-<!--          <option value="bye">Bye!</option>-->
-<!--        </select>-->
-<!--        <script>-->
-<!--          function changeSelection() {-->
-<!--            let select = document.getElementById("G")-->
-<!--            if (select.value === "hello") {-->
-<!--              select.value = "bye";-->
-<!--            } else {-->
-<!--              select.value = "hello";-->
-<!--            }-->
-<!--          }-->
-<!--        </script>-->
+    <tr>
+      <td>
+        <label for="G">G</label>
+        <select id="G" onmouseenter="changeSelection()" onchange="window.location.href='index.html';">
+          <option value="hello">Hello!</option>
+          <option value="bye">Bye!</option>
+        </select>
+        <script>
+          function changeSelection() {
+            let select = document.getElementById("G")
+            if (select.value === "hello") {
+              select.value = "bye";
+            } else {
+              select.value = "hello";
+            }
+          }
+        </script>
 
-<!--        <script>-->
-<!--          window.onload = function () {-->
-<!--            document.getElementById("G").value = "bye"; // Set default selection-->
-<!--          };-->
-<!--        </script>-->
-<!--      </td>-->
-<!--      <td>-->
-<!--        &lt;select onmouseenter=changeSelection onchange=index&gt;-->
-<!--        <br>-->
-<!--        &lt;option value=hello&gt;-->
-<!--        <br>-->
-<!--        &lt;option value=bye&gt;-->
-<!--        <br>-->
-<!--        &lt;/select&gt;-->
-<!--      </td>-->
-<!--      <td>-->
-<!--        Select with 2 attributes: onmouseenter, onchange. Hovering above the select does not trigger the onchange event.-->
-<!--      </td>-->
-<!--    </tr>-->
-<!--    <tr>-->
-<!--      <td>-->
-<!--        <p aria-label="H" onmouseenter="window.location.href='https://example.com/';" onmouseover="window.location.href='index.html';"> H - This is a text to hover over.</p>-->
-<!--      </td>-->
-<!--      <td>-->
-<!--        &lt;p onmouseenter=example onmouseover=index&gt;<br>&lt;/p&gt;-->
-<!--      </td>-->
-<!--      <td>-->
-<!--        Paragraph with 2 attributes: onmouseenter, onmouseover-->
-<!--      </td>-->
-<!--    </tr>-->
+        <script>
+          window.onload = function () {
+            document.getElementById("G").value = "bye"; // Set default selection
+          };
+        </script>
+      </td>
+      <td>
+        &lt;select onmouseenter=changeSelection onchange=index&gt;
+        <br>
+        &lt;option value=hello&gt;
+        <br>
+        &lt;option value=bye&gt;
+        <br>
+        &lt;/select&gt;
+      </td>
+      <td>
+        Select with 2 attributes: onmouseenter, onchange. Hovering above the select does not trigger the onchange event.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p aria-label="H" onmouseenter="window.location.href='https://example.com/';" onmouseover="window.location.href='index.html';"> H - This is a text to hover over.</p>
+      </td>
+      <td>
+        &lt;p onmouseenter=example onmouseover=index&gt;<br>&lt;/p&gt;
+      </td>
+      <td>
+        Paragraph with 2 attributes: onmouseenter, onmouseover
+      </td>
+    </tr>
   </table>
 
 </section>
