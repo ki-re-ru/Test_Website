@@ -91,45 +91,45 @@
         A select element A1 that has the options Yes or No. It enables or disables button A2 via a script that is triggered by an <b>onchange</b> attribute. A2 links to the example website.
       </td>
     </tr>
-    <tr>
-      <td>
-        <label>
-          B1-Yes <input type="radio" name="choice" id="radioYes" onchange="radioChanged()">
-        </label>
-        <label>
-          B2-No <input type="radio" name="choice" id="radioNo" onchange="radioChanged()">
-        </label>
-        <a href="https://example.com">
-          <button id="ExampleButton4" disabled>B3</button>
-        </a>
+<!--    <tr>-->
+<!--      <td>-->
+<!--        <label>-->
+<!--          B1-Yes <input type="radio" name="choice" id="radioYes" onchange="radioChanged()">-->
+<!--        </label>-->
+<!--        <label>-->
+<!--          B2-No <input type="radio" name="choice" id="radioNo" onchange="radioChanged()">-->
+<!--        </label>-->
+<!--        <a href="https://example.com">-->
+<!--          <button id="ExampleButton4" disabled>B3</button>-->
+<!--        </a>-->
 
-        <script>
-          function radioChanged() {
-            const radioYes = document.getElementById('radioYes');
-            let button = document.getElementById("ExampleButton4");
-            if (radioYes.checked) {
-              button.disabled = false;
-            } else {
-              button.disabled = true;
-            }
-          }
-        </script>
-      </td>
-      <td>
-        B1 & B2:
-        <br>
-        &lt;input type=radio onchange=checkToggleB3&gt;
-        &lt;input type=radio onchange=checkToggleB3&gt;
-        <br>
-        <br>
-        B3:
-        <br>
-        &lt;a href=example&gt;<br>&lt;button&gt;<br>&lt;/button&gt;<br>&lt;/a&gt;
-      </td>
-      <td>
-        Two radio buttons B1 and B2, that are grouped together using a name attribute, so that only one can be selected. If B1 is selected, button B3 is enabled. If B2 is selected, button B3 is disabled. This is achieved with a script that is triggered by an <b>onchange</b> attribute. B3 links to the example website.
-      </td>
-    </tr>
+<!--        <script>-->
+<!--          function radioChanged() {-->
+<!--            const radioYes = document.getElementById('radioYes');-->
+<!--            let button = document.getElementById("ExampleButton4");-->
+<!--            if (radioYes.checked) {-->
+<!--              button.disabled = false;-->
+<!--            } else {-->
+<!--              button.disabled = true;-->
+<!--            }-->
+<!--          }-->
+<!--        </script>-->
+<!--      </td>-->
+<!--      <td>-->
+<!--        B1 & B2:-->
+<!--        <br>-->
+<!--        &lt;input type=radio onchange=checkToggleB3&gt;-->
+<!--        &lt;input type=radio onchange=checkToggleB3&gt;-->
+<!--        <br>-->
+<!--        <br>-->
+<!--        B3:-->
+<!--        <br>-->
+<!--        &lt;a href=example&gt;<br>&lt;button&gt;<br>&lt;/button&gt;<br>&lt;/a&gt;-->
+<!--      </td>-->
+<!--      <td>-->
+<!--        Two radio buttons B1 and B2, that are grouped together using a name attribute, so that only one can be selected. If B1 is selected, button B3 is enabled. If B2 is selected, button B3 is disabled. This is achieved with a script that is triggered by an <b>onchange</b> attribute. B3 links to the example website.-->
+<!--      </td>-->
+<!--    </tr>-->
   </table>
 
 </section>
