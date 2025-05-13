@@ -14,25 +14,25 @@
 </header>
 
 <section>
+  <table>
+    <tr>
+      <td width="200" height="80">
+        <div onmouseenter="toggleDropdown('dropdownMenu2')" onmouseleave="toggleDropdown('dropdownMenu2')" aria-label="H1">H1
+          <ul id="dropdownMenu2" class="dropdown-content" hidden>
+            <li><a href="hover-example_page2.html" >B1</a></li>
+          </ul>
+        </div>
+      </td>
+      <td width="200" height="80">
+        <div onmouseover="toggleDropdown('dropdownMenu3')" onmouseout="toggleDropdown('dropdownMenu3')" aria-label="H2">H2
+          <ul id="dropdownMenu3" class="dropdown-content" hidden>
+            <li><a href="hover-example_page3.html" >B2</a></li>
+          </ul>
+        </div>
+      </td>
+  </table>
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <div onmouseenter="toggleDropdown('dropdownMenu2')" onmouseleave="toggleDropdown('dropdownMenu2')" aria-label="H1">H1
-    <ul id="dropdownMenu2" class="dropdown-content" hidden>
-      <li><a href="hover-example_page2.html" >B1</a></li>
-    </ul>
-  </div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div onmouseover="toggleDropdown('dropdownMenu3')" onmouseout="toggleDropdown('dropdownMenu3')" aria-label="H2">H2
-    <ul id="dropdownMenu3" class="dropdown-content" hidden>
-      <li><a href="hover-example_page3.html" >B2</a></li>
-    </ul>
-  </div>
+
   <script>
     function toggleDropdown(id) {
       let menu = document.getElementById(id);
